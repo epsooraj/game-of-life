@@ -1,19 +1,78 @@
 import numpy as np
 
+i, j = 70, 70
+
+
+def generate_glider():
+
+    gi = 5
+    gj = 5
+
+    lives = np.zeros((i, j), dtype=int)
+
+    lives[gi + 4, gj + 0] = 1
+    lives[gi + 4, gj + 1] = 1
+    lives[gi + 5, gj + 0] = 1
+    lives[gi + 5, gj + 1] = 1
+
+    lives[gi + 2, gj + 12] = 1
+    lives[gi + 2, gj + 13] = 1
+
+    lives[gi + 3, gj + 11] = 1
+
+    lives[gi + 4, gj + 10] = 1
+    lives[gi + 5, gj + 10] = 1
+    lives[gi + 6, gj + 10] = 1
+
+    lives[gi + 7, gj + 11] = 1
+    lives[gi + 8, gj + 12] = 1
+    lives[gi + 8, gj + 13] = 1
+
+    lives[gi + 5, gj + 14] = 1
+
+    lives[gi + 3, gj + 15] = 1
+    lives[gi + 4, gj + 16] = 1
+    lives[gi + 5, gj + 16] = 1
+    lives[gi + 5, gj + 17] = 1
+    lives[gi + 6, gj + 16] = 1
+    lives[gi + 7, gj + 15] = 1
+
+    lives[gi + 1, gj + 22] = 1
+    lives[gi + 2, gj + 20] = 1
+    lives[gi + 3, gj + 20] = 1
+    lives[gi + 4, gj + 20] = 1
+    lives[gi + 2, gj + 21] = 1
+    lives[gi + 3, gj + 21] = 1
+    lives[gi + 4, gj + 21] = 1
+    lives[gi + 5, gj + 22] = 1
+
+    lives[gi + 0, gj + 24] = 1
+    lives[gi + 1, gj + 24] = 1
+
+    lives[gi + 5, gj + 24] = 1
+    lives[gi + 6, gj + 24] = 1
+
+    lives[gi + 2, gj + 34] = 1
+    lives[gi + 3, gj + 34] = 1
+    lives[gi + 2, gj + 35] = 1
+    lives[gi + 3, gj + 35] = 1
+
+    return lives
+
 
 def initialize_life_state():
-    i, j = 50, 50
-
     # Generate a array pattern
     # 1 = alive
     # 0 = dead
 
-    lives = np.zeros((i, j), dtype=int)
-    lives[i//2, j//2] = 1
-    lives[i//2+1, j//2+1] = 1
-    lives[i//2+2, j//2-1] = 1
-    lives[i//2+2, j//2] = 1
-    lives[i//2+2, j//2+1] = 1
+    # lives = np.zeros((i, j), dtype=int)
+    # lives[i//2, j//2] = 1
+    # lives[i//2+1, j//2+1] = 1
+    # lives[i//2+2, j//2-1] = 1
+    # lives[i//2+2, j//2] = 1
+    # lives[i//2+2, j//2+1] = 1
+
+    lives = generate_glider()
 
     # lives = np.random.randint(2, size=(i, j))
 
