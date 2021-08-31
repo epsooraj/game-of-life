@@ -3,10 +3,7 @@ import numpy as np
 i, j = 70, 70
 
 
-def generate_glider():
-
-    gi = 5
-    gj = 5
+def generate_glider(gi, gj):
 
     lives = np.zeros((i, j), dtype=int)
 
@@ -72,7 +69,7 @@ def initialize_life_state():
     # lives[i//2+2, j//2] = 1
     # lives[i//2+2, j//2+1] = 1
 
-    lives = generate_glider()
+    lives = generate_glider(5, 5)
 
     # lives = np.random.randint(2, size=(i, j))
 
