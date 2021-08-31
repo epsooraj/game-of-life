@@ -77,6 +77,7 @@ def drawSquareGrid(origin, gridWH, cells):
 
     CONTAINER_WIDTH_HEIGHT = gridWH
     cont_x, cont_y = origin
+    border_size = 0
 
     # DRAW Grid Border:
     # TOP lEFT TO RIGHT
@@ -110,12 +111,12 @@ def drawSquareGrid(origin, gridWH, cells):
         pygame.draw.line(
             _VARS['surf'], ALIVE_COLOR,
             (cont_x + (cellSize * x), cont_y),
-            (cont_x + (cellSize * x), CONTAINER_WIDTH_HEIGHT + cont_y), 0)
+            (cont_x + (cellSize * x), CONTAINER_WIDTH_HEIGHT + cont_y), border_size)
     # # HORIZONTAl DIVISIONS
         pygame.draw.line(
             _VARS['surf'], ALIVE_COLOR,
             (cont_x, cont_y + (cellSize*x)),
-            (cont_x + CONTAINER_WIDTH_HEIGHT, cont_y + (cellSize*x)), 0)
+            (cont_x + CONTAINER_WIDTH_HEIGHT, cont_y + (cellSize*x)), border_size)
 
 
 def checkEvents():
