@@ -3,56 +3,56 @@ import numpy as np
 i, j = 70, 70
 
 
-def generate_glider(gi, gj):
+def generate_glider(i_offset, j_offset):
 
     lives = np.zeros((i, j), dtype=int)
 
-    lives[gi + 4, gj + 0] = 1
-    lives[gi + 4, gj + 1] = 1
-    lives[gi + 5, gj + 0] = 1
-    lives[gi + 5, gj + 1] = 1
+    lives[i_offset + 4, j_offset + 0] = 1
+    lives[i_offset + 4, j_offset + 1] = 1
+    lives[i_offset + 5, j_offset + 0] = 1
+    lives[i_offset + 5, j_offset + 1] = 1
 
-    lives[gi + 2, gj + 12] = 1
-    lives[gi + 2, gj + 13] = 1
+    lives[i_offset + 2, j_offset + 12] = 1
+    lives[i_offset + 2, j_offset + 13] = 1
 
-    lives[gi + 3, gj + 11] = 1
+    lives[i_offset + 3, j_offset + 11] = 1
 
-    lives[gi + 4, gj + 10] = 1
-    lives[gi + 5, gj + 10] = 1
-    lives[gi + 6, gj + 10] = 1
+    lives[i_offset + 4, j_offset + 10] = 1
+    lives[i_offset + 5, j_offset + 10] = 1
+    lives[i_offset + 6, j_offset + 10] = 1
 
-    lives[gi + 7, gj + 11] = 1
-    lives[gi + 8, gj + 12] = 1
-    lives[gi + 8, gj + 13] = 1
+    lives[i_offset + 7, j_offset + 11] = 1
+    lives[i_offset + 8, j_offset + 12] = 1
+    lives[i_offset + 8, j_offset + 13] = 1
 
-    lives[gi + 5, gj + 14] = 1
+    lives[i_offset + 5, j_offset + 14] = 1
 
-    lives[gi + 3, gj + 15] = 1
-    lives[gi + 4, gj + 16] = 1
-    lives[gi + 5, gj + 16] = 1
-    lives[gi + 5, gj + 17] = 1
-    lives[gi + 6, gj + 16] = 1
-    lives[gi + 7, gj + 15] = 1
+    lives[i_offset + 3, j_offset + 15] = 1
+    lives[i_offset + 4, j_offset + 16] = 1
+    lives[i_offset + 5, j_offset + 16] = 1
+    lives[i_offset + 5, j_offset + 17] = 1
+    lives[i_offset + 6, j_offset + 16] = 1
+    lives[i_offset + 7, j_offset + 15] = 1
 
-    lives[gi + 1, gj + 22] = 1
-    lives[gi + 2, gj + 20] = 1
-    lives[gi + 3, gj + 20] = 1
-    lives[gi + 4, gj + 20] = 1
-    lives[gi + 2, gj + 21] = 1
-    lives[gi + 3, gj + 21] = 1
-    lives[gi + 4, gj + 21] = 1
-    lives[gi + 5, gj + 22] = 1
+    lives[i_offset + 1, j_offset + 22] = 1
+    lives[i_offset + 2, j_offset + 20] = 1
+    lives[i_offset + 3, j_offset + 20] = 1
+    lives[i_offset + 4, j_offset + 20] = 1
+    lives[i_offset + 2, j_offset + 21] = 1
+    lives[i_offset + 3, j_offset + 21] = 1
+    lives[i_offset + 4, j_offset + 21] = 1
+    lives[i_offset + 5, j_offset + 22] = 1
 
-    lives[gi + 0, gj + 24] = 1
-    lives[gi + 1, gj + 24] = 1
+    lives[i_offset + 0, j_offset + 24] = 1
+    lives[i_offset + 1, j_offset + 24] = 1
 
-    lives[gi + 5, gj + 24] = 1
-    lives[gi + 6, gj + 24] = 1
+    lives[i_offset + 5, j_offset + 24] = 1
+    lives[i_offset + 6, j_offset + 24] = 1
 
-    lives[gi + 2, gj + 34] = 1
-    lives[gi + 3, gj + 34] = 1
-    lives[gi + 2, gj + 35] = 1
-    lives[gi + 3, gj + 35] = 1
+    lives[i_offset + 2, j_offset + 34] = 1
+    lives[i_offset + 3, j_offset + 34] = 1
+    lives[i_offset + 2, j_offset + 35] = 1
+    lives[i_offset + 3, j_offset + 35] = 1
 
     return lives
 
