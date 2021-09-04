@@ -5,8 +5,9 @@ The Game of Life, also known simply as Life, is a cellular automaton devised by 
 ## Life Death Conditions
 
 Death
+
 1. Any live cell with fewer than two live neighbours dies, as if by underpopulation.
-3. Any live cell with more than three live neighbours dies, as if by overpopulation.
+2. Any live cell with more than three live neighbours dies, as if by overpopulation.
 
 Survival
 
@@ -15,6 +16,10 @@ Survival
 Birth
 
 4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+
+## Todo
+- [x] Gosper glider gun
+- [ ] Gliderless spaceship guns
 
 ## References
 
